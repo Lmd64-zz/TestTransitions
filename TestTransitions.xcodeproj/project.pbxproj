@@ -13,7 +13,6 @@
 		0A6963C0181AA9EF002B5B0F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0A6963BE181AA9EF002B5B0F /* InfoPlist.strings */; };
 		0A6963C2181AA9EF002B5B0F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A6963C1181AA9EF002B5B0F /* main.m */; };
 		0A6963C6181AA9EF002B5B0F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A6963C5181AA9EF002B5B0F /* AppDelegate.m */; };
-		0A6963C9181AA9EF002B5B0F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A6963C7181AA9EF002B5B0F /* Main.storyboard */; };
 		0A6963CC181AA9EF002B5B0F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A6963CB181AA9EF002B5B0F /* ViewController.m */; };
 		0A6963CE181AA9EF002B5B0F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A6963CD181AA9EF002B5B0F /* Images.xcassets */; };
 		0A6963D5181AA9EF002B5B0F /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A6963D4181AA9EF002B5B0F /* XCTest.framework */; };
@@ -21,6 +20,9 @@
 		0A6963D7181AA9EF002B5B0F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A6963B9181AA9EF002B5B0F /* UIKit.framework */; };
 		0A6963DF181AA9EF002B5B0F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0A6963DD181AA9EF002B5B0F /* InfoPlist.strings */; };
 		0A6963E1181AA9EF002B5B0F /* TestTransitionsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A6963E0181AA9EF002B5B0F /* TestTransitionsTests.m */; };
+		0A6963EC181AAD9B002B5B0F /* OptionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A6963EB181AAD9B002B5B0F /* OptionsViewController.m */; };
+		0A6963F6181AB3F5002B5B0F /* Animator.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A6963F5181AB3F5002B5B0F /* Animator.m */; };
+		0A6963FC181ACA5B002B5B0F /* Interactor.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A6963FB181ACA5B002B5B0F /* Interactor.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,7 +46,6 @@
 		0A6963C3181AA9EF002B5B0F /* TestTransitions-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TestTransitions-Prefix.pch"; sourceTree = "<group>"; };
 		0A6963C4181AA9EF002B5B0F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0A6963C5181AA9EF002B5B0F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		0A6963C8181AA9EF002B5B0F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0A6963CA181AA9EF002B5B0F /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		0A6963CB181AA9EF002B5B0F /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		0A6963CD181AA9EF002B5B0F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -53,6 +54,12 @@
 		0A6963DC181AA9EF002B5B0F /* TestTransitionsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TestTransitionsTests-Info.plist"; sourceTree = "<group>"; };
 		0A6963DE181AA9EF002B5B0F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		0A6963E0181AA9EF002B5B0F /* TestTransitionsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestTransitionsTests.m; sourceTree = "<group>"; };
+		0A6963EA181AAD9B002B5B0F /* OptionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OptionsViewController.h; sourceTree = "<group>"; };
+		0A6963EB181AAD9B002B5B0F /* OptionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OptionsViewController.m; sourceTree = "<group>"; };
+		0A6963F4181AB3F5002B5B0F /* Animator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Animator.h; sourceTree = "<group>"; };
+		0A6963F5181AB3F5002B5B0F /* Animator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Animator.m; sourceTree = "<group>"; };
+		0A6963FA181ACA5B002B5B0F /* Interactor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Interactor.h; sourceTree = "<group>"; };
+		0A6963FB181ACA5B002B5B0F /* Interactor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Interactor.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,9 +121,14 @@
 			children = (
 				0A6963C4181AA9EF002B5B0F /* AppDelegate.h */,
 				0A6963C5181AA9EF002B5B0F /* AppDelegate.m */,
-				0A6963C7181AA9EF002B5B0F /* Main.storyboard */,
 				0A6963CA181AA9EF002B5B0F /* ViewController.h */,
 				0A6963CB181AA9EF002B5B0F /* ViewController.m */,
+				0A6963EA181AAD9B002B5B0F /* OptionsViewController.h */,
+				0A6963EB181AAD9B002B5B0F /* OptionsViewController.m */,
+				0A6963F4181AB3F5002B5B0F /* Animator.h */,
+				0A6963F5181AB3F5002B5B0F /* Animator.m */,
+				0A6963FA181ACA5B002B5B0F /* Interactor.h */,
+				0A6963FB181ACA5B002B5B0F /* Interactor.m */,
 				0A6963CD181AA9EF002B5B0F /* Images.xcassets */,
 				0A6963BC181AA9EF002B5B0F /* Supporting Files */,
 			);
@@ -230,7 +242,6 @@
 			files = (
 				0A6963CE181AA9EF002B5B0F /* Images.xcassets in Resources */,
 				0A6963C0181AA9EF002B5B0F /* InfoPlist.strings in Resources */,
-				0A6963C9181AA9EF002B5B0F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,8 +260,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A6963F6181AB3F5002B5B0F /* Animator.m in Sources */,
 				0A6963CC181AA9EF002B5B0F /* ViewController.m in Sources */,
+				0A6963EC181AAD9B002B5B0F /* OptionsViewController.m in Sources */,
 				0A6963C6181AA9EF002B5B0F /* AppDelegate.m in Sources */,
+				0A6963FC181ACA5B002B5B0F /* Interactor.m in Sources */,
 				0A6963C2181AA9EF002B5B0F /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -280,14 +294,6 @@
 				0A6963BF181AA9EF002B5B0F /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		0A6963C7181AA9EF002B5B0F /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				0A6963C8181AA9EF002B5B0F /* Base */,
-			);
-			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 		0A6963DD181AA9EF002B5B0F /* InfoPlist.strings */ = {

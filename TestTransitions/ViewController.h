@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "OptionsViewController.h"
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <UIViewControllerTransitioningDelegate>
+
+@property (nonatomic,strong) OptionsViewController *optionsViewController;
 
 @end
