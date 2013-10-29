@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>4DB6E0CF-3159-4764-A7E7-DBA499F58E2A</string>
+	<key>IDESourceControlProjectName</key>
+	<string>TestTransitions</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>9B74AE7B-4F20-488E-9DDD-787A5698F9C4</key>
+		<string>https://github.com/Lmd64/TestTransitions.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>TestTransitions.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>9B74AE7B-4F20-488E-9DDD-787A5698F9C4</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/Lmd64/TestTransitions.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>9B74AE7B-4F20-488E-9DDD-787A5698F9C4</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>9B74AE7B-4F20-488E-9DDD-787A5698F9C4</string>
+			<key>IDESourceControlWCCName</key>
+			<string>TestTransitions</string>
+		</dict>
+	</array>
+</dict>
+</plist>

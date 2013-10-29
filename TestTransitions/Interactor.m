@@ -58,16 +58,16 @@
         CGFloat ratio = location.x / CGRectGetWidth(self.parentViewController.view.bounds);
         [self updateInteractiveTransition:ratio];
 
-    } else if (recognizer.state == UIGestureRecognizerStateEnded) {
+    } else if (recognizer.state == UIGestureRecognizerStateEnded || recognizer.state == UIGestureRecognizerStateFailed) {
         // Depending on our state and the velocity, determine whether to cancel or complete the transition.
         if (self.presenting) {
-            if (velocity.x > 0) {
+            if (velocity.x >= 0) {
                 [self finishInteractiveTransition];
             } else {
                 [self cancelInteractiveTransition];
             }
         } else {
-            if (velocity.x < 0) {
+            if (velocity.x <= 0) {
                 [self finishInteractiveTransition];
             } else {
                 [self cancelInteractiveTransition];
@@ -116,6 +116,7 @@
 }
 
 - (void)animateTransition:(id <UIViewControllerContextTransitioning>)transitionContext {
+    DLog(@"");
     if (self.interactive) {
         // nop as per documentation
     } else {
@@ -171,6 +172,7 @@
 }
 
 - (void)animationEnded:(BOOL)transitionCompleted {
+    DLog(@"");
     // Reset to our default state
     self.interactive = NO;
     self.presenting = NO;
@@ -182,6 +184,7 @@
 // //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 - (void)startInteractiveTransition:(id<UIViewControllerContextTransitioning>)transitionContext {
+    DLog(@"");
     self.transitionContext = transitionContext;
     
     UIViewController *fromViewController = [transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
@@ -234,6 +237,7 @@
 }
 
 - (void)finishInteractiveTransition {
+    DLog(@"");
     id<UIViewControllerContextTransitioning> transitionContext = self.transitionContext;
     
     UIViewController *fromViewController = [transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
@@ -271,6 +275,7 @@
 }
 
 - (void)cancelInteractiveTransition {
+    DLog(@"");
     id<UIViewControllerContextTransitioning> transitionContext = self.transitionContext;
     
     UIViewController *fromViewController = [transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
@@ -278,19 +283,29 @@
     
     if (self.presenting)
     {
-        CGRect endFrame = CGRectOffset([[transitionContext containerView] bounds], -CGRectGetWidth([[transitionContext containerView] bounds]), 0);
+        CGRect endFrameTo = CGRectOffset([[transitionContext containerView] bounds], -CGRectGetWidth([[transitionContext containerView] bounds]), 0);
+        CGRect endFrameFrom = [[transitionContext containerView] bounds];
         
         [UIView animateWithDuration:0.5f animations:^{
-            toViewController.view.frame = endFrame;
+            fromViewController.view.frame = endFrameFrom;
+            fromViewController.view.alpha = 1.0;
+            fromViewController.view.transform = CGAffineTransformIdentity;
+            toViewController.view.frame = endFrameTo;
+            
         } completion:^(BOOL finished) {
             [transitionContext completeTransition:NO];
         }];
     }
     else {
-        CGRect endFrame = [[transitionContext containerView] bounds];
+        CGRect endFrameTo = [[transitionContext containerView] bounds];
+        CGRect endFrameFrom = CGRectOffset([[transitionContext containerView] bounds], -CGRectGetWidth([[transitionContext containerView] bounds]), 0);
         
         [UIView animateWithDuration:0.5f animations:^{
-            fromViewController.view.frame = endFrame;
+            toViewController.view.frame = endFrameTo;
+            toViewController.view.alpha = 1.0;
+            toViewController.view.transform = CGAffineTransformIdentity;
+            fromViewController.view.frame = endFrameFrom;
+            fromViewController.view.alpha = 0.0;
         } completion:^(BOOL finished) {
             [transitionContext completeTransition:NO];
         }];

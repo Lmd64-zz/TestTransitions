@@ -22,7 +22,7 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
 
-    self.view.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.75];
+    self.view.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.85];
 
     UILabel *label = [[UILabel alloc] init];
     [label setText:@"Options"];
